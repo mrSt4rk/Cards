@@ -1,26 +1,74 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: Raleway, 'Dancing Script', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.card-left,
+.card-right {
+    height: 300px;
+    border-radius: 20px 0 20px 20px;
+}
+
+.card-right {
+    border-radius: 0 20px 20px 20px;
+}
+
+.card-left:before,
+.card-right:before {
+    content: '';
+    width: 50%;
+    height: 40px;
+    border-radius: 65px 20px 0 0;
+    background-color: #00CBA0;
+    position: absolute;
+    top: -1.2em;
+    right: 0px;
+    z-index: -1;
+}
+
+.card-right:before {
+    width: 25%;
+    border-radius: 20px 65px 0 0;
+    background-color: #FDC448;
+    left: 0px;
+}
+
+.pic-container {
+    background: url('../public/kevin1.png') no-repeat center 20px;
+    background-size: 50% cover;
+}
+
+.img-back {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    left: 60px;
+    z-index: 0;
+    vertical-align: bottom;
+}
+
+.middle-pic {
+    background: url('../public/headphone.png') no-repeat center center;
+    background-size: 90%;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: white;
+        background: black;
+    }
 }
